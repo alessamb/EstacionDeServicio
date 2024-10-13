@@ -5,7 +5,11 @@ Esta librería implementa la gestión de una "Pista" en una estación de servici
 Funcionalidades
 
 Liberar Surtidor: Cambia el estado de un surtidor a Libre o Prefijado.
+
 Bloquear Surtidor: Cambia el estado de un surtidor a Bloqueado.
+
 Obtener Estado de Surtidores: Obtiene el estado actual de todos los surtidores.
+
 Registrar Suministro: Registra un suministro realizado y actualiza el estado del surtidor.
+
 Obtener Historial: Obtiene el historial de suministros ordenado según los requisitos.

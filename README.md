@@ -1,4 +1,5 @@
 Estación de Servicio - Prueba Técnica
+
 Esta librería implementa la gestión de una "Pista" en una estación de servicio, controlando múltiples surtidores y manteniendo un historial de suministros realizados. Permite operaciones como liberar, prefijar, y bloquear surtidores, así como registrar y obtener el historial de suministros.
 
 Funcionalidades

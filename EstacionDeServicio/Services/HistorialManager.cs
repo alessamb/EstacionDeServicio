@@ -19,6 +19,7 @@ namespace EstacionDeServicio.Services
 
         public IEnumerable<Suministro> ObtenerHistorial()
         {
+            //ordeno por importe y fecha
             return historial
                 .OrderByDescending(s => s.ImporteFinal)
                 .ThenByDescending(s => s.FechaHora);

@@ -53,7 +53,7 @@ namespace EstacionDeServicioTest
                 pista.RegistrarSuministro(1, importeFinal)
             );
 
-            Assert.Equal("El importe surtido excede el importe prefijado.", exception.Message);
+            Assert.Equal("El importe a surtir excede el importe solicitado.", exception.Message);
         }
 
         [Fact]

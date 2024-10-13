@@ -56,8 +56,8 @@ namespace EstacionDeServicio.Services
             if (surtidor.Estado == EstadoSurtidor.Bloqueado)
                 throw new InvalidOperationException("El surtidor está bloqueado.");
 
-            if (importeFinal < surtidor.ImporteSol)
-                throw new InvalidOperationException("El importe surtido es menor al importe prefijado.");
+            if (surtidor.ImporteSol.HasValue && importeFinal > surtidor.ImporteSol.Value)
+                throw new InvalidOperationException("El importe a surtir excede el importe solicitado.");
 
             var suministro = new Suministro(
                 surtidorId,
@@ -68,7 +68,7 @@ namespace EstacionDeServicio.Services
 
             histSuministros.AgregarSuministro(suministro);
 
-            // Después del suministro, bloquear el surtidor y eliminar cualquier prefijado
+            // Después del suministro, bloquear el surtidor y eliminar cualquier importe solicitado
             surtidor.Bloquear();
         }
     }
